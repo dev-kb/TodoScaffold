@@ -17,5 +17,10 @@ namespace TodoApp.Models
         // 
         // System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<TodoApp.Models.TodoAppContext>());
 
+        public DbSet<TodoApp.Models.Task> Tasks { get; set; }
+
+        public DbSet<TodoApp.Models.Note> Notes { get; set; }
+
+        public DbSet<TodoApp.Models.Status> Status { get; set; }
     }
 }
