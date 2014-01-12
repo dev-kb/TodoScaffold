@@ -1,13 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Web;
-
 namespace TodoApp.Models
-{ 
+{
+    using System;
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Linq.Expressions;
+
     public class TaskRepository : ITaskRepository
     {
         TodoAppContext context = new TodoAppContext();
