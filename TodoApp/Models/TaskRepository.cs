@@ -32,9 +32,11 @@ namespace TodoApp.Models
         {
             if (task.TaskId == default(int)) {
                 // New entity
+                task.CreatedOn = task.ModifiedOn = DateTime.Now;
                 context.Tasks.Add(task);
             } else {
                 // Existing entity
+                task.ModifiedOn = DateTime.Now;
                 context.Entry(task).State = EntityState.Modified;
             }
         }

@@ -32,9 +32,11 @@ namespace TodoApp.Models
         {
             if (note.NoteId == default(int)) {
                 // New entity
+                note.CreatedOn = note.ModifiedOn = DateTime.Now;
                 context.Notes.Add(note);
             } else {
                 // Existing entity
+                note.ModifiedOn = DateTime.Now;
                 context.Entry(note).State = EntityState.Modified;
             }
         }
